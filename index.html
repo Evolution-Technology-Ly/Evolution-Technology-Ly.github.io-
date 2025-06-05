@@ -1,148 +1,29 @@
+
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Evolution Technology</title>
-  <style>
-    :root {
-      --bg-light: #ffffff;
-      --bg-dark: #111827;
-      --text-light: #1f2937;
-      --text-dark: #f3f4f6;
-      --primary: #2563eb;
-    }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evolution Technology - Software Development Company</title>
+    <meta name="description" content="Evolution Technology - Leading software development company providing innovative solutions for businesses worldwide" />
+    <meta name="author" content="Evolution Technology" />
 
-    [data-theme='light'] {
-      --bg: var(--bg-light);
-      --text: var(--text-light);
-    }
+    <meta property="og:title" content="Evolution Technology - Software Development Company" />
+    <meta property="og:description" content="Leading software development company providing innovative solutions for businesses worldwide" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    [data-theme='dark'] {
-      --bg: var(--bg-dark);
-      --text: var(--text-dark);
-    }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@evolution_tech" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 2rem;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .toggle {
-      cursor: pointer;
-      background: none;
-      border: 2px solid var(--text);
-      border-radius: 5px;
-      padding: 0.4rem 1rem;
-      color: var(--text);
-      font-weight: bold;
-    }
-
-    h1, h2 {
-      color: var(--primary);
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: rgba(0, 0, 0, 0.03);
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Evolution Technology</h1>
-    <button class="toggle" onclick="toggleTheme()">Toggle Mode</button>
-  </header>
-
-  <section>
-    <h2>About Us</h2>
-    <p>
-      We are a Libyan-based software company delivering high-quality solutions for startups, businesses, and entrepreneurs. Our mission is to evolve ideas into technology.
-    </p>
-  </section>
-
-  <section>
-    <h2>Our Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Evo.AutoLink</h3>
-        <p>Car import management system for tracking shipping, sales, and finances.</p>
-      </div>
-      <div class="card">
-        <h3>Evo.Wallet</h3>
-        <p>Offline-first personal finance app built with .NET MAUI.</p>
-      </div>
-      <div class="card">
-        <h3>Evo.Auth</h3>
-        <p>Modular identity and access control for distributed systems.</p>
-      </div>
-      <!-- Add more projects here -->
-    </div>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:info@evotech.ly">info@evotech.ly</a></p>
-    <p>GitHub: <a href="https://github.com/evolution-technology" target="_blank">evolution-technology</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Evolution Technology. All rights reserved.
-  </footer>
-
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const current = html.getAttribute('data-theme');
-      html.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
-    }
-  </script>
-
-</body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
