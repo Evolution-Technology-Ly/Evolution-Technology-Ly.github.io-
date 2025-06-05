@@ -19,47 +19,115 @@
   </script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="font-sans transition-all duration-300">
+<body class="font-sans transition-all duration-300 relative">
+  <div class="hero-bg"></div>
+  <header class="p-4 flex justify-between items-center shadow-md bg-white dark:bg-slate-900 sticky top-0 z-50 fade-in">
+    <div class="flex items-center space-x-3">
+      <img src="assets/img/logo.png" alt="EvoTech Logo" class="h-10 w-auto" />
+      <h1 class="text-2xl font-bold text-primary">EvoTech</h1>
+    </div>
+    <button id="theme-toggle" class="p-2 bg-primary text-white rounded-full pulse flex items-center justify-center" aria-label="Toggle Theme">
+      <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path id="theme-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 5.66l-.71-.71M4.05 4.93l-.71-.71M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+    </button>
+  </header>
 
-  <header class="p-4 flex justify-between items-center shadow-md bg-white dark:bg-slate-900 sticky top-0 z-50">
-  <div class="flex items-center space-x-3">
-    <img src="assets/img/logo.png" alt="EvoTech Logo" class="h-10 w-auto" />
-    <h1 class="text-2xl font-bold text-primary">EvoTech</h1>
-  </div>
-  <button id="theme-toggle" class="px-3 py-1 bg-primary text-white rounded">Toggle Theme</button>
-</header>
-
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gray-50 dark:bg-slate-800">
-    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Evolution Technology</h2>
-    <p class="text-lg sm:text-xl max-w-xl mb-6 text-gray-600 dark:text-gray-300">
-      We build modern, reliable, and scalable systems like <strong>Evo.AutoLink</strong> to help businesses grow.
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gray-50 dark:bg-slate-900 relative fade-in" style="z-index:1;">
+    <img src="assets/img/logo.png" alt="Decorative EvoTech" class="mt-8 w-32 opacity-70 fade-in pb-8" style="animation-delay:0.6s;" />
+    <h2 class="text-4xl sm:text-5xl font-bold mb-4 slide-up text-gray-900 dark:text-white">Evolution Technology</h2>
+    <p class="text-lg sm:text-xl max-w-xl mb-6 text-gray-600 dark:text-gray-200 slide-up" style="animation-delay:0.2s;">
+      We build modern, reliable, and scalable systems like <strong class="dark:text-white">Evo.AutoLink</strong> to help businesses grow.
     </p>
-    <a href="#projects" class="px-6 py-2 bg-primary text-white rounded hover:opacity-90">See Our Work</a>
+    <a href="#projects" class="px-6 py-2 bg-primary text-white rounded hover:opacity-90 fade-in" style="animation-delay:0.4s;">See Our Work</a>
   </section>
 
-  <section id="projects" class="py-16 px-6 bg-white dark:bg-slate-900">
-    <h3 class="text-3xl font-bold text-center mb-12">Our Projects</h3>
+  <section id="projects" class="py-16 px-6 bg-white dark:bg-slate-900 fade-in">
+    <h3 class="text-3xl font-bold text-center mb-12 slide-up text-gray-900 dark:text-white">Our Projects</h3>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-      <div class="p-6 bg-gray-100 dark:bg-slate-800 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold mb-2">Evo.AutoLink</h4>
-        <p class="text-gray-700 dark:text-gray-300">Car import management system built with ASP.NET & Blazor.</p>
+      <div class="card" style="background:none;">
+        <div class="card-background" style="background-image:url('assets/img/car.jpeg');"></div>
+        <div class="card-overlay"></div>
+        <div class="swiper-pagination">
+          <div class="swiper-pagination-bullet"></div>
+          <div class="swiper-pagination-bullet-active"></div>
+          <div class="swiper-pagination-bullet"></div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            Evo.AutoLink
+            <span class="card-price">Car Import</span>
+          </div>
+          <p class="card-description">Car import management system built with ASP.NET & Blazor.</p>
+          <div class="card-tags">
+            <span class="tag">ASP.NET</span>
+            <span class="tag">Blazor</span>
+            <span class="tag">Management</span>
+          </div>
+          <a href="#" class="reserve-button">Learn More</a>
+        </div>
       </div>
-      <div class="p-6 bg-gray-100 dark:bg-slate-800 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold mb-2">Evo.Wallet</h4>
-        <p class="text-gray-700 dark:text-gray-300">Offline-first money tracker built with .NET MAUI.</p>
+      <div class="card" style="background:none;">
+        <div class="card-background" style="background-image:url('assets/img/wallet.jpeg');"></div>
+        <div class="card-overlay"></div>
+        <div class="swiper-pagination">
+          <div class="swiper-pagination-bullet"></div>
+          <div class="swiper-pagination-bullet-active"></div>
+          <div class="swiper-pagination-bullet"></div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            Evo.Wallet
+            <span class="card-price">Money Tracker</span>
+          </div>
+          <p class="card-description">Offline-first money tracker built with .NET MAUI.</p>
+          <div class="card-tags">
+            <span class="tag">.NET MAUI</span>
+            <span class="tag">Offline</span>
+            <span class="tag">Finance</span>
+          </div>
+          <a href="#" class="reserve-button">Learn More</a>
+        </div>
       </div>
-      <div class="p-6 bg-gray-100 dark:bg-slate-800 rounded-lg shadow hover:shadow-lg transition">
-        <h4 class="text-xl font-semibold mb-2">Evo.API Platform</h4>
-        <p class="text-gray-700 dark:text-gray-300">Microservices-based API platform for fintech clients.</p>
+      <div class="card" style="background:none;">
+        <div class="card-background" style="background-image:url('assets/img/api.jpeg');"></div>
+        <div class="card-overlay"></div>
+        <div class="swiper-pagination">
+          <div class="swiper-pagination-bullet"></div>
+          <div class="swiper-pagination-bullet-active"></div>
+          <div class="swiper-pagination-bullet"></div>
+        </div>
+        <div class="card-content">
+          <div class="card-title">
+            Evo.API Platform
+            <span class="card-price">API Platform</span>
+          </div>
+          <p class="card-description">Microservices-based API platform for fintech clients.</p>
+          <div class="card-tags">
+            <span class="tag">Microservices</span>
+            <span class="tag">API</span>
+            <span class="tag">Fintech</span>
+          </div>
+          <a href="#" class="reserve-button">Learn More</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="py-12 bg-gray-100 dark:bg-slate-800 text-center">
+  <footer class="py-12 bg-gray-100 dark:bg-slate-900 text-center fade-in">
     <p class="text-gray-700 dark:text-gray-300 mb-2">Contact us: <a href="mailto:info@evotech.ly" class="text-primary">info@evotech.ly</a></p>
     <p class="text-sm text-gray-500 dark:text-gray-400">© 2025 Evolution Technology. All rights reserved.</p>
   </footer>
 
   <script src="assets/js/theme-toggle.js"></script>
+  <script>
+    // Animate on load
+    document.querySelectorAll('.fade-in').forEach((el, i) => {
+      el.style.animationDelay = (i * 0.15) + 's';
+    });
+    document.querySelectorAll('.slide-up').forEach((el, i) => {
+      el.style.animationDelay = (i * 0.15) + 's';
+    });
+  </script>
 </body>
 </html>
