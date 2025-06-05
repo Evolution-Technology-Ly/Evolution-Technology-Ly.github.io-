@@ -1,1 +1,65 @@
-"hello evo" 
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evolution Technology</title>
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563EB',
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="font-sans transition-all duration-300">
+
+  <header class="p-4 flex justify-between items-center shadow-md bg-white dark:bg-slate-900 sticky top-0 z-50">
+  <div class="flex items-center space-x-3">
+    <img src="assets/img/logo.png" alt="EvoTech Logo" class="h-10 w-auto" />
+    <h1 class="text-2xl font-bold text-primary">EvoTech</h1>
+  </div>
+  <button id="theme-toggle" class="px-3 py-1 bg-primary text-white rounded">Toggle Theme</button>
+</header>
+
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gray-50 dark:bg-slate-800">
+    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Evolution Technology</h2>
+    <p class="text-lg sm:text-xl max-w-xl mb-6 text-gray-600 dark:text-gray-300">
+      We build modern, reliable, and scalable systems like <strong>Evo.AutoLink</strong> to help businesses grow.
+    </p>
+    <a href="#projects" class="px-6 py-2 bg-primary text-white rounded hover:opacity-90">See Our Work</a>
+  </section>
+
+  <section id="projects" class="py-16 px-6 bg-white dark:bg-slate-900">
+    <h3 class="text-3xl font-bold text-center mb-12">Our Projects</h3>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+      <div class="p-6 bg-gray-100 dark:bg-slate-800 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Evo.AutoLink</h4>
+        <p class="text-gray-700 dark:text-gray-300">Car import management system built with ASP.NET & Blazor.</p>
+      </div>
+      <div class="p-6 bg-gray-100 dark:bg-slate-800 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Evo.Wallet</h4>
+        <p class="text-gray-700 dark:text-gray-300">Offline-first money tracker built with .NET MAUI.</p>
+      </div>
+      <div class="p-6 bg-gray-100 dark:bg-slate-800 rounded-lg shadow hover:shadow-lg transition">
+        <h4 class="text-xl font-semibold mb-2">Evo.API Platform</h4>
+        <p class="text-gray-700 dark:text-gray-300">Microservices-based API platform for fintech clients.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-12 bg-gray-100 dark:bg-slate-800 text-center">
+    <p class="text-gray-700 dark:text-gray-300 mb-2">Contact us: <a href="mailto:info@evotech.ly" class="text-primary">info@evotech.ly</a></p>
+    <p class="text-sm text-gray-500 dark:text-gray-400">© 2025 Evolution Technology. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/js/theme-toggle.js"></script>
+</body>
+</html>
