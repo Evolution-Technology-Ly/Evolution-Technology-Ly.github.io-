@@ -1,3 +1,39 @@
+:root {
+  --dl-color-gray-white: #fff;
+  --dl-color-gray-black: #000;
+  --dl-color-secondary-400: #344767;
+  --dl-color-secondary-600: #111827;
+  --dl-color-blue-500: #2152ff;
+  /* add other variables as needed */
+}
+
+body.dark-theme {
+  --dl-color-gray-white: #ffffff;
+  --dl-color-gray-black: #fff;
+  --dl-color-secondary-400: #e4e6eb;
+  --dl-color-secondary-600: #f0f2f5;
+  --dl-color-blue-500: #445ca5;
+  --dl-color-secondary-500: #6b7286;
+  --dl-color-secondary-700: #6a7699;
+  --dl-color-secondary-800: #1d2027;
+  --dl-color-pink-200: #6a7699;
+  /* keep accent/button colors unchanged */
+  background: #18191a !important;
+  color: #ebe4e4 !important;
+}
+
+body.dark-theme .profile-container10 {
+  background: transparent !important;
+}
+
+body.dark-theme .profile-form1 {
+  background-color: var(--dl-color-secondary-800) !important;
+}
+
+body.dark-theme .footer-footer {
+  background: var(--dl-color-secondary-800) !important;
+}
+
 .primary-pink-button-wrapper {
   display: contents;
 }
@@ -8,7 +44,7 @@
 }
 
 .primary-pink-button-button {
-  color: var(--dl-color-gray-white);
+  color: #fff;
   outline: none;
   background: linear-gradient(310deg, #7928ca, #ff0080);
   box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
@@ -48,6 +84,7 @@
   padding-left: var(--dl-layout-space-unitandahalfunit);
   padding-right: var(--dl-layout-space-unitandahalfunit);
   justify-content: center;
+  background-color: var(--dl-color-secondary-800);
 }
 
 .header-full-nav {
@@ -464,7 +501,7 @@
 }
 
 .primary-blue-button-button {
-  color: var(--dl-color-gray-white);
+  color: #fff;
   outline: none;
   background: linear-gradient(310deg, #2152ff, #21d4fd);
   box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
@@ -959,11 +996,12 @@
   border-radius: var(--dl-layout-radius-radius5);
   padding-right: var(--dl-layout-space-triplequarterunit);
   padding-bottom: var(--dl-layout-space-halfunit);
+  background-color: var(--dl-color-secondary-800);
 }
 
 .profile-textinput1:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px #e9aede;
+  box-shadow: 0 0 0 2px var(--dl-color-pink-200);
   border-color: var(--dl-color-pink-200);
 }
 
@@ -983,11 +1021,12 @@
   border-radius: var(--dl-layout-radius-radius5);
   padding-right: var(--dl-layout-space-triplequarterunit);
   padding-bottom: var(--dl-layout-space-halfunit);
+  background-color: var(--dl-color-secondary-800);
 }
 
 .profile-textinput2:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px #e9aede;
+  box-shadow: 0 0 0 2px var(--dl-color-pink-200);
   border-color: var(--dl-color-pink-200);
 }
 
@@ -1006,11 +1045,12 @@
   border-radius: var(--dl-layout-radius-radius5);
   padding-right: var(--dl-layout-space-triplequarterunit);
   padding-bottom: var(--dl-layout-space-halfunit);
+  background-color: var(--dl-color-secondary-800);
 }
 
 .profile-textarea:focus {
   outline: 0;
-  box-shadow: 0 0 0 2px #e9aede;
+  box-shadow: 0 0 0 2px var(--dl-color-pink-200);
   border-color: var(--dl-color-pink-200);
 }
 
@@ -1161,15 +1201,16 @@
 }
 
 .profile-image2 {
-  top: 0px;
-  left: -1px;
-  right: auto;
+  background-image: url("public/wave-1.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100px;
-  z-index: 2;
+  height: 100%; /* Set a proper height for your SVG display */
   position: absolute;
-  object-fit: cover;
+  top: 0;
+  left: -1px;
+  z-index: 2;
 }
-
 .profile-container28 {
   top: auto;
   left: auto;
@@ -1405,4 +1446,34 @@
 .primary-pink-button-button1:hover {
   cursor: pointer;
   transform: scale(1.02);
+}
+
+.theme-toggle-floating {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  background: #fdfdfd00;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.theme-toggle-floating:hover {
+  background: #44444410;
+  color: #ffd700;
+  transform: scale(1.08);
+}
+
+body.dark-theme .profile-image2 {
+  background-image: url("public/wave-1-dark.svg");
 }

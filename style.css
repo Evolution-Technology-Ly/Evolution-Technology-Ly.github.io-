@@ -23,6 +23,7 @@
   --dl-color-secondary-500: #344767ff;
   --dl-color-secondary-600: #252f40ff;
   --dl-color-secondary-700: #20273fff;
+  --dl-color-secondary-800: rgba(255, 255, 255, 0);
   --dl-layout-radius-round: 50%;
   --dl-layout-size-halfunit: 0.5rem;
   --dl-layout-radius-radius1: 1rem;

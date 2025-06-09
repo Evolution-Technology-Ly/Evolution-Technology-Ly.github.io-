@@ -1,3 +1,27 @@
+:root {
+  --dl-color-gray-white: #fff;
+  --dl-color-gray-black: #000;
+  --dl-color-secondary-400: #344767;
+  --dl-color-secondary-600: #111827;
+  --dl-color-blue-500: #2152ff;
+  /* add other variables as needed */
+}
+
+body.dark-theme {
+  --dl-color-gray-white: #18191a;
+  --dl-color-gray-black: #fff;
+  --dl-color-secondary-400: #e4e6eb;
+  --dl-color-secondary-600: #f5f0f0;
+  --dl-color-blue-500: #445ca5;
+  /* keep accent/button colors unchanged */
+  background: #18191a;
+  color: #ebe6e4;
+}
+
+body.dark-theme .footer-gray-footer {
+  background-color: var(--dl-color-gray-400);
+}
+
 .primary-pink-button-wrapper {
   display: contents;
 }
@@ -8,7 +32,7 @@
 }
  
 .primary-pink-button-button {
-  color: var(--dl-color-gray-white);
+  color: #fff;
   outline: none;
   background: linear-gradient( 310deg ,#7928ca,#ff0080);
   box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
@@ -36,7 +60,7 @@
 }
  
 .primary-pink-button-button1 {
-  color: var(--dl-color-gray-white);
+  color: #fff;
   outline: none;
   background: linear-gradient( 310deg ,#7928ca,#ff0080);
   box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
@@ -91,7 +115,7 @@
   padding-bottom: var(--dl-layout-space-halfunit);
   backdrop-filter: saturate(200%) blur(30px);
   justify-content: space-between;
-    background-color: hsla(0, 0%, 100%, 0)!important;
+    background-color: hsla(0, 0%, 100%, 0.15)!important;
 }
  
 .header-container1 {
@@ -314,7 +338,7 @@
 }
  
 .secondary-button-button {
-  color: var(--dl-color-gray-white);
+  color: #fff;
   outline: none;
   background: linear-gradient(310deg,#141727,#3a416f);
   box-shadow: 0 4px 7px -1px rgb(0 0 0 / 11%), 0 2px 4px -1px rgb(0 0 0 / 7%);
@@ -680,7 +704,7 @@
 }
  
 .coming-soon-text2 {
-  color: var(--dl-color-secondary-700);
+  color: var(--dl-color-secondary-400);
   font-size: 3rem;
   margin-bottom: var(--dl-layout-space-halfunit);
 }
@@ -953,4 +977,30 @@
   min-height: 100vh;
   align-items: center;
   flex-direction: column;
+}
+
+.theme-toggle-floating {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 9999;
+  background: #fdfdfd00;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.theme-toggle-floating:hover {
+  background: #44444410;
+  color: #ffd700;
+  transform: scale(1.08);
 }
