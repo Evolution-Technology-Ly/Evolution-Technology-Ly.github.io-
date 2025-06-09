@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"></html>
+<html lang="en">
+
+</html>
 
 <head>
   <title>Profile - EvoTech</title>
@@ -167,26 +169,71 @@
   <link rel="stylesheet" href="./style.css" />
   <div>
     <link href="./profile.css" rel="stylesheet" />
-    <div class="profile-container10"><header-full-wrapper class="header-full-wrapper"><!--HeaderFull component-->
-        <div class="header-full-header">
+    <div class="profile-container10">
+      <header-full-wrapper class="header-full-wrapper"><!--HeaderFull component-->
+        <div data-role="Header" class="header-full-header">
           <nav class="header-full-nav">
-            <div class="header-full-container1"><a href="index.html" class="header-full-navlink1 Large">Evolution Technology</a>
+            <div class="header-full-container1">
+              <a href="index.html" class="header-full-navlink1 Large">Evolution Technology</a>
               <div class="header-full-menu"><a href="index.html" class="header-full-navlink2 Large">Home</a><a
                   href="profile.html" class="header-full-navlink3 Large">Profile</a><a href="coming-soon.html"
                   class="header-full-navlink4 Large">Coming Soon</a></div>
               <div class="header-full-container2">
-                <div class="header-full-container3"><primary-pink-button-wrapper
-                    class="primary-pink-button-wrapper"><!--PrimaryPinkButton component-->
+                <div class="header-full-container3">
+                  <primary-pink-button-wrapper class="primary-pink-button-wrapper"><!--PrimaryPinkButton component-->
                     <div class="primary-pink-button-container"><button
                         class="primary-pink-button-button button ButtonSmall"><span>buy now</span></button></div>
-                  </primary-pink-button-wrapper></div><svg viewBox="0 0 1024 1024" class="header-full-icon1">
+                  </primary-pink-button-wrapper>
+                </div>
+                <!-- Burger Icon for mobile -->
+                <svg id="header-full-burger" viewBox="0 0 1024 1024" class="header-full-icon1"
+                  style="display:block;cursor:pointer;">
                   <path d="M128 256h768v86h-768v-86zM128 554v-84h768v84h-768zM128 768v-86h768v86h-768z"></path>
                 </svg>
               </div>
             </div>
           </nav>
+          <!-- Mobile Menu Overlay -->
+          <div data-role="MobileMenu" id="header-full-mobile-menu">
+            <div class="header-top">
+              <a href="index.html" class="header-navlink5 Large">Evolution Technology</a>
+              <div id="header-full-close" data-role="CloseMobileMenu" class="header-close-menu">
+                <svg viewBox="0 0 1024 1024" class="header-icon3">
+                  <path
+                    d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="header-mid">
+              <div class="header-full-menu2"><a href="index.html" class="header-full-navlink6 Large">Home</a><a
+                  href="profile.html" class="header-navlink7 Large">Profile</a><a href="coming-soon.html"
+                  class="header-navlink8 Large">Coming Soon</a></div>
+            </div>
+            <div class="header-bot">
+              <primary-pink-button-wrapper-lb81
+                class="primary-pink-button-wrapper-lb81"><!--PrimaryPinkButton component-->
+                <div class="primary-pink-button-container1"><button
+                    class="primary-pink-button-button1 button ButtonSmall"><span>buy now</span></button></div>
+              </primary-pink-button-wrapper-lb81>
+            </div>
+          </div>
         </div>
       </header-full-wrapper>
+      
+      <script>
+        // Mobile menu toggle logic
+        const burger = document.getElementById('header-full-burger');
+        const mobileMenu = document.getElementById('header-full-mobile-menu');
+        const closeBtn = document.getElementById('header-full-close');
+        function openMenu() { mobileMenu.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+        function closeMenu() { mobileMenu.style.display = 'none'; document.body.style.overflow = ''; }
+        burger && burger.addEventListener('click', openMenu);
+        closeBtn && closeBtn.addEventListener('click', closeMenu);
+        // Close on link click (for SPA feel)
+        mobileMenu && mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+      </script>
+
       <div class="profile-profile"><img alt="image" src="public/taha-reeh-200h.jpg" class="profile-image1" />
         <div class="profile-container11">
           <div class="profile-container12">
@@ -311,8 +358,7 @@
                     <path
                       d="M854 342v-86l-342 214-342-214v86l342 212zM854 170q34 0 59 26t25 60v512q0 34-25 60t-59 26h-684q-34 0-59-26t-25-60v-512q0-34 25-60t59-26h684z">
                     </path>
-                  </svg><a href="mailto:info@evotech.ly?subject="
-                    class="profile-link2 Small">info@evotech.ly</a></div>
+                  </svg><a href="mailto:info@evotech.ly?subject=" class="profile-link2 Small">info@evotech.ly</a></div>
                 <div class="profile-container26"><svg viewBox="0 0 1024 1024" class="profile-icon16">
                     <path
                       d="M512 490q44 0 75-31t31-75-31-75-75-31-75 31-31 75 31 75 75 31zM512 86q124 0 211 87t87 211q0 62-31 142t-75 150-87 131-73 97l-32 34q-12-14-32-37t-72-92-91-134-71-147-32-144q0-124 87-211t211-87z">
@@ -343,7 +389,8 @@
       </div><footer-wrapper class="footer-wrapper"><!--Footer component-->
         <footer class="footer-footer">
           <div class="footer-container1">
-            <div class="footer-container2"><span class="footer-text10">Evolution Technology</span><span>Copyright © 2025 Evolution
+            <div class="footer-container2"><span class="footer-text10">Evolution Technology</span><span>Copyright © 2025
+                Evolution
                 Technology.</span></div>
             <div class="footer-container3">
               <div class="footer-container4"><span class="footer-text12 Large">Company</span><span

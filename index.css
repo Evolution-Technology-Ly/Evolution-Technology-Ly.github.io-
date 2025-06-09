@@ -91,7 +91,7 @@
   padding-bottom: var(--dl-layout-space-halfunit);
   backdrop-filter: saturate(200%) blur(30px);
   justify-content: space-between;
-  background-color: hsla(0,0%,100%,.8)!important;
+  background-color: hsla(0, 0%, 100%, 0.500)!important;
 }
  
 .header-container1 {
@@ -926,6 +926,11 @@
   justify-content: center;
 }
  
+@media (max-width: 479px) {
+  .home-container11 {
+    padding-top: 50px;
+  }
+}
 .home-card {
   flex: 0 0 auto;
   width: 60%;
@@ -938,8 +943,9 @@
   border-radius: var(--dl-layout-radius-radius1);
   flex-direction: column;
   backdrop-filter: saturate(200%) blur(30px);
-  background-color: hsla(0,0%,100%,.8);
+  background-color: hsla(0,0%,100%,.5);
 }
+
  
 .home-text10 {
   text-align: center;
