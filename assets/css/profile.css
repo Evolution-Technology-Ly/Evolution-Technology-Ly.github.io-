@@ -859,7 +859,7 @@ body.dark-theme .footer-footer {
   border-radius: var(--dl-layout-radius-radius1);
   flex-direction: column;
   background-size: cover;
-  background-image: url("https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/seaside.jpg");
+  background-image: url("assets/img/seaside.jpg");
 }
 
 .profile-container16 {
@@ -1077,8 +1077,7 @@ body.dark-theme .footer-footer {
   border-radius: 0px;
   flex-direction: column;
   background-size: cover;
-  justify-content: center;
-  background-image: url("public/curved5-1400w.jpg");
+  background-image: url("assets/img/curved5-1400w.jpg");
   border-top-right-radius: var(--dl-layout-radius-radius1);
   border-bottom-right-radius: var(--dl-layout-radius-radius1);
 }
@@ -1201,7 +1200,7 @@ body.dark-theme .footer-footer {
 }
 
 .profile-image2 {
-  background-image: url("public/wave-1.svg");
+  background-image: url("assets/img/wave-1.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100px;
@@ -1475,5 +1474,5 @@ body.dark-theme .footer-footer {
 }
 
 body.dark-theme .profile-image2 {
-  background-image: url("public/wave-1-dark.svg");
+  background-image: url("assets/img/wave-1-dark.svg");
 }
