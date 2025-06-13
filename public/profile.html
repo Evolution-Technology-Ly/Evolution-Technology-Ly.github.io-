@@ -166,15 +166,15 @@
 </head>
 
 <body>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/styles/style.css" />
+  <link rel="stylesheet" href="../assets/styles/profile.css" />
   <div>
-    <link href="assets/css/profile.css" rel="stylesheet" />
     <div class="profile-container10">
       <header-full-wrapper class="header-full-wrapper"><!--HeaderFull component-->
         <div data-role="Header" class="header-full-header">
           <nav class="header-full-nav">
             <div class="header-full-container1">
-              <a href="index.html"><img src="assets/img/logo.png" alt="Logo" width="30px" /></a>
+              <a href="index.html"><img src="../assets/images/logo.png" alt="Logo" width="30px" /></a>
               <div class="header-full-menu"><a href="index.html" class="header-full-navlink2 Large">Home</a><a
                   href="profile.html" class="header-full-navlink3 Large">Profile</a><a href="coming-soon.html"
                   class="header-full-navlink4 Large">Coming Soon</a></div>
@@ -234,7 +234,7 @@
         mobileMenu && mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
       </script>
 
-      <div class="profile-profile"><img alt="image" src="assets/img/taha-reeh-200h.jpg" class="profile-image1" />
+      <div class="profile-profile"><img alt="image" src="../assets/images/taha-reeh-200h.jpg" class="profile-image1" />
         <div class="profile-container11">
           <div class="profile-container12">
             <h4 class="profile-text10">Taha Reeh</h4><outline-blue-button-wrapper
@@ -263,48 +263,57 @@
         <h1 class="profile-text21 HeadingTwo"><span></span><span>Check my latest blogposts</span><br /></h1>
         <div class="profile-container14"><blog-card-wrapper class="blog-card-wrapper"><!--BlogCard component-->
             <div class="blog-card-container"><img alt="image"
-                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/color-bags.jpg"
-                class="blog-card-image" />
-              <h5 class="blog-card-text1"><span>Rover raised $65 million</span></h5><span><span>Finding temporary
-                  housing for your dog should be as easy as
-                  renting an Airbnb. That’s the idea behind Rover</span></span><next-button-wrapper-g0yu
-                class="next-button-wrapper-g0yu"><!--NextButton component-->
-                <div class="next-button-container1"><button class="next-button-button1 button"><span
-                      class="next-button-text1"><span>Read more</span></span><svg viewBox="0 0 1024 1024"
-                      class="next-button-icon3">
-                      <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
-                    </svg></button></div>
+              src="../assets/images/blazor-post.jpg"
+              class="blog-card-image" />
+              <h5 class="blog-card-text1"><span>Getting Started with Blazor</span></h5><span><span>Blazor lets you build interactive web UIs using C# instead of JavaScript. Discover how to create modern, fast, and maintainable web apps with .NET and WebAssembly.</span></span><next-button-wrapper-g0yu
+              class="next-button-wrapper-g0yu"><!--NextButton component-->
+              <div class="next-button-container1"><button class="next-button-button1 button"><span
+                  class="next-button-text1"><span>Read more</span></span><svg viewBox="0 0 1024 1024"
+                  class="next-button-icon3">
+                  <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
+                </svg></button></div>
               </next-button-wrapper-g0yu>
             </div>
-          </blog-card-wrapper><blog-card-wrapper-owh6 class="blog-card-wrapper-owh6"><!--BlogCard component-->
-            <div class="blog-card-container1"><img alt="image"
-                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/color-clock.jpg"
-                class="blog-card-image1" />
-              <h5 class="blog-card-text3"><span>Rover raised $65 million</span></h5><span><span>Venture investment in
-                  U.S. startups rose sequentially in
-                  the second quarter of 2017, boosted by large, ate-stage
-                  financings</span></span><next-button-wrapper-metp
-                class="next-button-wrapper-metp"><!--NextButton component-->
-                <div class="next-button-container2"><button class="next-button-button2 button"><span
-                      class="next-button-text2"><span>Read more</span></span><svg viewBox="0 0 1024 1024"
-                      class="next-button-icon5">
-                      <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
-                    </svg></button></div>
+          </blog-card-wrapper>
+            <blog-card-wrapper-owh6 class="blog-card-wrapper-owh6"><!--BlogCard component-->
+            <div class="blog-card-container1">
+              <img alt="Docker logo" src="../assets/images/docker.png" class="blog-card-image1" />
+              <h5 class="blog-card-text3"><span>Getting Started with Docker</span></h5>
+              <span>
+              <span>
+                Learn how Docker simplifies application deployment by packaging your code and dependencies into containers. Discover the basics of building, running, and sharing containerized apps.
+              </span>
+              </span>
+              <next-button-wrapper-metp class="next-button-wrapper-metp"><!--NextButton component-->
+              <div class="next-button-container2">
+                <button class="next-button-button2 button">
+                <span class="next-button-text2"><span>Read more</span></span>
+                <svg viewBox="0 0 1024 1024" class="next-button-icon5">
+                  <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
+                </svg>
+                </button>
+              </div>
               </next-button-wrapper-metp>
             </div>
-          </blog-card-wrapper-owh6><blog-card-wrapper-fa5n class="blog-card-wrapper-fa5n"><!--BlogCard component-->
-            <div class="blog-card-container2"><img alt="image"
-                src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/color-wall.jpg"
-                class="blog-card-image2" />
-              <h5 class="blog-card-text5"><span>Rover raised $65 million</span></h5><span><span>If you’ve ever wanted to
-                  train a machine learning model and
-                  integrate it with IFTTT, you now can with</span></span><next-button-wrapper-52d4
-                class="next-button-wrapper-52d4"><!--NextButton component-->
-                <div class="next-button-container3"><button class="next-button-button3 button"><span
-                      class="next-button-text3"><span>Read more</span></span><svg viewBox="0 0 1024 1024"
-                      class="next-button-icon7">
-                      <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
-                    </svg></button></div>
+            </blog-card-wrapper-owh6>
+            <blog-card-wrapper-fa5n class="blog-card-wrapper-fa5n"><!--BlogCard component-->
+            <div class="blog-card-container2">
+              <img alt="Clean Architecture Diagram" src="../assets/images/clean-post.png" class="blog-card-image2" />
+              <h5 class="blog-card-text5"><span>Understanding Clean Architecture</span></h5>
+              <span>
+              <span>
+                Discover the principles of Clean Architecture and how it helps you build maintainable, testable, and scalable software. Learn how to separate concerns and organize your code for long-term success.
+              </span>
+              </span>
+              <next-button-wrapper-52d4 class="next-button-wrapper-52d4"><!--NextButton component-->
+              <div class="next-button-container3">
+                <button class="next-button-button3 button">
+                <span class="next-button-text3"><span>Read more</span></span>
+                <svg viewBox="0 0 1024 1024" class="next-button-icon7">
+                  <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
+                </svg>
+                </button>
+              </div>
               </next-button-wrapper-52d4>
             </div>
           </blog-card-wrapper-fa5n>
@@ -314,10 +323,14 @@
                 <h1 class="profile-text24">Flexible work hours</h1><span class="profile-text25"><span
                     class="profile-text26">Rather than worrying about switching offices every couple
                     years, you stay in the same place.</span></span>
-                <div class="profile-container17"><button class="profile-button button"><span class="profile-text27">Read
-                      more</span><svg viewBox="0 0 1024 1024" class="profile-icon10">
+                <div class="profile-container17">
+                  <button class="profile-button button">
+                    <span class="profile-text27">Read more</span>
+                    <svg viewBox="0 0 1024 1024" class="profile-icon10">
                       <path d="M512 170l342 342-342 342-60-60 238-240h-520v-84h520l-238-240z"></path>
-                    </svg></button></div>
+                    </svg>
+                  </button>
+                </div>
               </div>
               <div class="profile-container18"></div>
             </div>
@@ -405,7 +418,7 @@
                   class="footer-text21 Large">Free</span><span class="footer-text22 Large">PRO</span><span
                   class="footer-text23 Large">Latest</span></div>
             </div>
-          </div><img alt="image" src="assets/img/waves-white.svg" class="footer-image" />
+          </div><img alt="image" src="../assets/images/waves-white.svg" class="footer-image" />
         </footer>
       </footer-wrapper>
     </div>

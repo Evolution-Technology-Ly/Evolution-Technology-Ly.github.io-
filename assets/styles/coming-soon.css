@@ -1,3 +1,6 @@
+@import url('variables.css');
+@import url('buttons.css');
+
 :root {
   --dl-color-gray-white: #fff;
   --dl-color-gray-black: #000;
@@ -828,7 +831,6 @@ body.dark-theme .footer-gray-footer {
 .coming-soon-image25 {
   width: 100%;
 }
- 
 @media(max-width: 991px) {
   .coming-soon-container2 {
     background-size: auto;

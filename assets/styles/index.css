@@ -1,3 +1,5 @@
+@import url('variables.css');
+@import url('buttons.css');
 :root {
   --dl-color-gray-white: #fff;
   --dl-color-gray-black: #000;
@@ -1568,7 +1570,7 @@ body.dark-theme .footer-footer {
 }
 
 .home-bottom-wave-image {
-  background-image: url("assets/img/bottom.svg");
+  background-image: url("../images/bottom.svg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 15%;
@@ -1594,7 +1596,7 @@ body.dark-theme .footer-footer {
 }
 
 .home-top-wave-image {
-  background-image: url("assets/img/top.svg");
+  background-image: url("../images/top.svg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 18%;
@@ -1788,7 +1790,7 @@ body.dark-theme .footer-footer {
 .home-container49 {
   display: flex;
   position: relative;
-  box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, .15), 0 8px 9px -5px hsla(0, 0%, 8%, .06) !important;
+  box-shadow: 0 8px 26px -4px hsla(0, 0%, 8%, .15), 0 8px 9px -1px hsla(0, 0%, 8%, .06) !important;
   transition: 0.3s;
   align-items: center;
   padding-top: var(--dl-layout-space-sixunits);
@@ -2090,9 +2092,9 @@ body.dark-theme .footer-footer {
 }
 
 body.dark-theme .home-bottom-wave-image {
-  background-image: url("assets/img/bottom-dark.svg");
+  background-image: url("../images/bottom-dark.svg");
 }
 
 body.dark-theme .home-top-wave-image {
-  background-image: url("assets/img/top-dark.svg");
+  background-image: url("../images/top-dark.svg");
 }

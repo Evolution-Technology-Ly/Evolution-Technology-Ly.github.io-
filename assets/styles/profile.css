@@ -1,3 +1,9 @@
+@import url('variables.css');
+@import url('buttons.css');
+@import url('header.css');
+@import url('footer.css');
+@import url('forms.css');
+
 :root {
   --dl-color-gray-white: #fff;
   --dl-color-gray-black: #000;
@@ -330,6 +336,7 @@ body.dark-theme .footer-footer {
 
 .blog-card-image {
   width: 100%;
+  height: 150px;
   box-shadow: 0 0.25rem 0.375rem -0.0625rem hsl(0deg 0% 8% / 12%), 0 0.125rem 0.25rem -0.0625rem hsl(0deg 0% 8% / 7%);
   object-fit: cover;
   transition: 0.3s;
@@ -402,6 +409,7 @@ body.dark-theme .footer-footer {
 
 .blog-card-image1 {
   width: 100%;
+  height: 150px;
   box-shadow: 0 0.25rem 0.375rem -0.0625rem hsl(0deg 0% 8% / 12%), 0 0.125rem 0.25rem -0.0625rem hsl(0deg 0% 8% / 7%);
   object-fit: cover;
   transition: 0.3s;
@@ -474,6 +482,7 @@ body.dark-theme .footer-footer {
 
 .blog-card-image2 {
   width: 100%;
+  height: 150px;
   box-shadow: 0 0.25rem 0.375rem -0.0625rem hsl(0deg 0% 8% / 12%), 0 0.125rem 0.25rem -0.0625rem hsl(0deg 0% 8% / 7%);
   object-fit: cover;
   transition: 0.3s;
@@ -859,7 +868,7 @@ body.dark-theme .footer-footer {
   border-radius: var(--dl-layout-radius-radius1);
   flex-direction: column;
   background-size: cover;
-  background-image: url("assets/img/seaside.jpg");
+  background-image: url("/assets/images/seaside.jpg");
 }
 
 .profile-container16 {
@@ -1077,7 +1086,7 @@ body.dark-theme .footer-footer {
   border-radius: 0px;
   flex-direction: column;
   background-size: cover;
-  background-image: url("assets/img/curved5-1400w.jpg");
+  background-image: url("../images/curved5-1400w.jpg");
   border-top-right-radius: var(--dl-layout-radius-radius1);
   border-bottom-right-radius: var(--dl-layout-radius-radius1);
 }
@@ -1200,7 +1209,7 @@ body.dark-theme .footer-footer {
 }
 
 .profile-image2 {
-  background-image: url("assets/img/wave-1.svg");
+  background-image: url("../images/wave-1.svg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100px;
@@ -1474,5 +1483,5 @@ body.dark-theme .footer-footer {
 }
 
 body.dark-theme .profile-image2 {
-  background-image: url("assets/img/wave-1-dark.svg");
+  background-image: url("../images/wave-1-dark.svg");
 }

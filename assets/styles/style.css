@@ -1,3 +1,5 @@
+@import url('buttons.css');
+@import url('variables.css');
 :root {
   --dl-color-blue-500: #17c1e8ff;
   --dl-color-gray-500: #595959;
