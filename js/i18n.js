@@ -7,17 +7,23 @@
 (function () {
   'use strict';
 
-  /* ── Page map (page name → path from root) ──────────────────────────────── */
-  var PAGES = {
-    home:          '/index.html',
-    about:         '/about.html',
-    services:      '/services.html',
-    contact:       '/contact.html',
-    architecture:  '/services/architecture.html',
-    development:   '/services/development.html',
-    modernization: '/services/modernization.html',
-    consulting:    '/services/consulting.html',
+  /* ── Page map (relative paths — works on file:// and HTTP alike) ────────── */
+  var RELATIVE_PATHS = {
+    home:          'index.html',
+    about:         'about.html',
+    services:      'services.html',
+    contact:       'contact.html',
+    architecture:  'services/architecture.html',
+    development:   'services/development.html',
+    modernization: 'services/modernization.html',
+    consulting:    'services/consulting.html',
   };
+
+  /* ── Root-relative prefix ('' for root pages, '../' for services/ pages) ── */
+  function getDepth() {
+    var servicePages = ['architecture', 'development', 'modernization', 'consulting'];
+    return servicePages.indexOf(document.body.dataset.page || 'home') !== -1 ? '../' : '';
+  }
 
   /* ── Language detection ─────────────────────────────────────────────────── */
   function detectLang() {
@@ -31,9 +37,9 @@
     return lang;
   }
 
-  /* ── Build page URL with lang param ────────────────────────────────────── */
+  /* ── Build page URL with lang param (relative, works on file:// + HTTP) ─── */
   function pageUrl(pageName, lang) {
-    var path = PAGES[pageName] || '/index.html';
+    var path = getDepth() + (RELATIVE_PATHS[pageName] || 'index.html');
     var defaultLang = (ET_CONFIG && ET_CONFIG.defaultLang) || 'en';
     return lang === defaultLang ? path : path + '?lang=' + lang;
   }
@@ -471,40 +477,15 @@
     document.head.appendChild(link);
   }
 
-  /* ── Main init ──────────────────────────────────────────────────────────── */
-  async function init() {
-    var lang = detectLang();
-    localStorage.setItem('et-lang', lang);
-
-    /* Apply direction + Bootstrap before content renders */
-    document.documentElement.lang = lang;
-    document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr';
-    applyBootstrapDirection(lang);
-    applyFont(lang);
-
-    /* Load translations */
-    var translations = {};
-    try {
-      var res = await fetch('/locales/' + lang + '.json');
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      translations = await res.json();
-    } catch (e) {
-      console.warn('[ET] Failed to load locale:', lang, e);
-    }
-
+  /* ── Render all page content from loaded translations ───────────────────── */
+  function renderAll(translations, lang) {
     var page = document.body.dataset.page || 'home';
 
-    /* Update meta + title */
     updateMeta(translations, page);
-
-    /* Render chrome */
     renderHeader(translations, lang);
     renderFooter(translations, lang);
-
-    /* Apply all data-i18n* attributes */
     applyTranslations(translations, lang);
 
-    /* Page-specific dynamic rendering */
     renderHomeServices(translations, lang);
     renderHomePrinciples(translations);
     renderAboutPhilosophy(translations);
@@ -514,13 +495,30 @@
     renderContactSelect(translations);
     renderContactSteps(translations);
 
-    /* Expose globals for inline handlers */
     window.ET = window.ET || {};
     window.ET.lang = {
       switch: switchLang,
       current: lang,
       t: function (key) { return resolve(translations, key) || key; },
     };
+  }
+
+  /* ── Main init ──────────────────────────────────────────────────────────── */
+  function init() {
+    var lang = detectLang();
+    localStorage.setItem('et-lang', lang);
+
+    document.documentElement.lang = lang;
+    document.documentElement.dir  = lang === 'ar' ? 'rtl' : 'ltr';
+    applyBootstrapDirection(lang);
+    applyFont(lang);
+
+    /* Locale globals are pre-loaded as static <script> tags in each HTML file */
+    var translations = window['ET_LOCALE_' + lang.toUpperCase()] || {};
+    if (!translations || !translations.site) {
+      console.warn('[ET] Locale not loaded. Add <script src="locales/' + lang + '.js"> to <head>.');
+    }
+    renderAll(translations, lang);
   }
 
   /* Run on DOM ready */
