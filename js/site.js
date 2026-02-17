@@ -87,7 +87,7 @@
     /* --- mailto fallback --- */
     function submitMailto() {
       var cfg = (typeof ET_CONFIG !== 'undefined' && ET_CONFIG) || {};
-      var to = cfg.contactEmail || 'contact@evolutiontechnology.ly';
+      var to = cfg.contactEmail || 'info@evotech.ly';
       var name = (form.querySelector('[name="name"]') || {}).value || '';
       var email = (form.querySelector('[name="email"]') || {}).value || '';
       var company = (form.querySelector('[name="company"]') || {}).value || '';
