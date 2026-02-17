@@ -563,3 +563,17 @@ a:hover { color: var(--accent-hover); }
    ═══════════════════════════════════════════════════════════════════════════════ */
 .et-footer-brand-link { text-decoration: none; }
 .et-footer .et-brand-name { color: #e2e8f0; }
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   39. Brand logo
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.et-brand-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+.et-brand-logo--footer {
+  height: 32px;
+  opacity: 0.9;
+}

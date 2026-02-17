@@ -170,8 +170,8 @@
         '<nav class="navbar navbar-expand-lg et-navbar" aria-label="Main navigation">',
           '<div class="container">',
             '<a class="navbar-brand et-brand" href="' + pageUrl('home', lang) + '">',
-              '<span class="et-brand-mark">ET</span>',
-              '<span class="et-brand-name">Evolution Technology</span>',
+            '<img src="' + getDepth() + 'img/logo.png" alt="' + escHtml(t('site.name')) + '" class="et-brand-logo">',
+            '<span class="et-brand-name">' + escHtml(t('site.name')) + '</span>',
             '</a>',
             '<button class="navbar-toggler et-toggler" type="button"',
               ' data-bs-toggle="collapse" data-bs-target="#et-nav"',
@@ -231,7 +231,7 @@
     var headingServices = isAr ? 'الخدمات'  : 'Services';
     var headingContact  = isAr ? 'التواصل'  : 'Contact';
 
-    var contactEmail = (ET_CONFIG && ET_CONFIG.contactEmail) || 'contact@evolutiontechnology.ly';
+    var contactEmail = (ET_CONFIG && ET_CONFIG.contactEmail) || 'info@evotech.ly';
 
     var html = [
       '<footer class="et-footer" role="contentinfo">',
@@ -239,8 +239,8 @@
           '<div class="et-footer-grid">',
             '<div class="et-footer-brand">',
               '<a href="' + pageUrl('home', lang) + '" class="et-brand et-footer-brand-link">',
-                '<span class="et-brand-mark">ET</span>',
-                '<span class="et-brand-name">Evolution Technology</span>',
+                '<img src="' + getDepth() + 'img/logo.png" alt="' + escHtml(t('site.name')) + '" class="et-brand-logo et-brand-logo--footer">',
+                '<span class="et-brand-name">' + escHtml(t('site.name')) + '</span>',
               '</a>',
               '<p class="et-footer-tagline">' + escHtml(t('footer.tagline')) + '</p>',
             '</div>',

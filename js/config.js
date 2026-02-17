@@ -12,7 +12,7 @@ const ET_CONFIG = {
   formspreeEndpoint: '',
 
   /** Contact email (used in footer and mailto fallback) */
-  contactEmail: 'contact@evolutiontechnology.ly',
+  contactEmail: 'info@evotech.ly',
 
   /** Supported languages */
   languages: ['en', 'ar'],
