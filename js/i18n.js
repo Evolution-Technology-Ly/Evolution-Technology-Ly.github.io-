@@ -492,7 +492,7 @@
     link.id = 'et-font';
     link.rel = 'stylesheet';
     link.href = lang === 'ar'
-      ? 'https://fonts.googleapis.com/css2?family=IBM+Plex+Arabic:wght@300;400;500;600&display=swap'
+      ? 'https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap'
       : 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&family=DM+Mono:wght@400;500&display=swap';
     document.head.appendChild(link);
   }
