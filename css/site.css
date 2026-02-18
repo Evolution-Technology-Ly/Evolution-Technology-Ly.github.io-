@@ -178,11 +178,30 @@ a:hover { color: var(--accent-hover); }
   padding: 6rem 0 5rem; border-bottom: 1px solid var(--border);
   position: relative; overflow: hidden;
 }
+/* background image — inset: -30px expands past overflow:hidden edges so blur fringe is clipped */
 .et-hero::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 60% at 60% 0%, var(--accent-subtle) 0%, transparent 70%);
+  content: ''; position: absolute; inset: -30px;
+  background: url('../img/hero-bg.jpg') center / cover no-repeat;
   pointer-events: none;
+  z-index: 0;
 }
+/* Bluish dark gradient overlay — sits on top of the image */
+.et-hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(6, 18, 70, 0.84) 0%,
+    rgba(18, 54, 130, 0.62) 55%,
+    rgba(4, 12, 55, 0.90) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+/* Hero text — always light so it reads against the dark-blue overlay */
+.et-hero .et-hero__inner { z-index: 2; }
+.et-hero .et-label        { color: #93b8f5; }
+.et-hero .et-hero__title  { color: #f0f4ff; }
+.et-hero .et-hero__subtitle { color: rgba(224, 232, 255, 0.78); }
 .et-hero-eyebrow {
   font-size: .75rem; font-weight: 600; letter-spacing: .14em;
   text-transform: uppercase; color: var(--accent);
