@@ -231,8 +231,6 @@
     var headingServices = isAr ? 'الخدمات'  : 'Services';
     var headingContact  = isAr ? 'التواصل'  : 'Contact';
 
-    var contactEmail = (ET_CONFIG && ET_CONFIG.contactEmail) || 'info@evotech.ly';
-
     var html = [
       '<footer class="et-footer" role="contentinfo">',
         '<div class="container">',
@@ -264,9 +262,30 @@
             '</nav>',
             '<div class="et-footer-contact">',
               '<h3 class="et-footer-heading">' + escHtml(headingContact) + '</h3>',
-              '<a href="mailto:' + escHtml(contactEmail) + '" class="et-footer-email">',
-                escHtml(contactEmail),
+              '<a href="mailto:info@evotech.ly" class="et-footer-contact-link">',
+                '<i class="bi bi-envelope-fill" aria-hidden="true"></i> info@evotech.ly',
               '</a>',
+              '<a href="tel:+218928706173" class="et-footer-contact-link">',
+                '<i class="bi bi-telephone-fill" aria-hidden="true"></i> +218 92 870 6173',
+              '</a>',
+              '<p class="et-footer-address">',
+                '<i class="bi bi-geo-alt-fill" aria-hidden="true"></i> ',
+                escHtml(t('pages.contact.channels.address.value')),
+              '</p>',
+              '<div class="et-footer-social">',
+                '<a href="https://wa.me/218928706173" target="_blank" rel="noopener noreferrer"',
+                  ' class="et-footer-social-link" aria-label="WhatsApp">',
+                  '<i class="bi bi-whatsapp"></i>',
+                '</a>',
+                '<a href="https://www.linkedin.com/company/evo-tech-ly" target="_blank" rel="noopener noreferrer"',
+                  ' class="et-footer-social-link" aria-label="LinkedIn">',
+                  '<i class="bi bi-linkedin"></i>',
+                '</a>',
+                '<a href="https://www.facebook.com/evotechly" target="_blank" rel="noopener noreferrer"',
+                  ' class="et-footer-social-link" aria-label="Facebook">',
+                  '<i class="bi bi-facebook"></i>',
+                '</a>',
+              '</div>',
             '</div>',
           '</div>',
           '<div class="et-footer-bottom">',
