@@ -33,7 +33,7 @@
   --footer-heading:#e2e8f0;
 
   --font-en:   'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-ar:   'IBM Plex Arabic', 'Segoe UI', Arial, sans-serif;
+  --font-ar:   "El Messiri", sans-serif;
   --font-mono: 'DM Mono', 'Fira Code', 'Consolas', monospace;
 
   --section-py: 5rem;
@@ -181,6 +181,7 @@ a:hover { color: var(--accent-hover); }
 /* background image — inset: -30px expands past overflow:hidden edges so blur fringe is clipped */
 .et-hero::before {
   content: ''; position: absolute; inset: -30px;
+  /* filter: blur(5px); */
   background: url('../img/hero-bg.jpg') center / cover no-repeat;
   pointer-events: none;
   z-index: 0;
@@ -233,6 +234,8 @@ a:hover { color: var(--accent-hover); }
 .et-btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); color: #fff; }
 .et-btn-outline { background: transparent; color: var(--text-secondary); border-color: var(--border-strong); }
 .et-btn-outline:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-subtle); }
+.et-btn-outline-secondary { background: transparent; color: #c8d3e0; border-color: var(--border-strong); }
+.et-btn-outline-secondary:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-subtle); }
 
 /* ── 8. Cards ──────────────────────────────────────────────────────────────── */
 .et-card {
