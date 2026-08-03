@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "product": "evocommerce",
-  "latest": "1.0.0",
-  "releasedAt": "2026-08-03T17:03:00Z",
+  "latest": "1.1.0",
+  "releasedAt": "2026-08-03T19:06:00Z",
   "minSupported": "1.0.0",
   "mandatory": false,
   "notes": {
-    "ar": "الإصدار الأول المُدار عبر النشر الآلي.",
-    "en": "First release published through the automated pipeline."
+    "ar": "تحديث النظام من داخل البرنامج: يصلك إشعار عند توفر إصدار جديد، ويأخذ النظام نسخة احتياطية قبل التحديث. لا يسمح بالتحديث أثناء وجود وردية مفتوحة.",
+    "en": "Self-service updates: you are notified when a new version is published, and a backup is taken before updating. Updating is blocked while a POS session is open."
   },
   "notesUrl": null
 }
