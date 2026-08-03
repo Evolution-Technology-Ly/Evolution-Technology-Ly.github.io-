@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "product": "evocommerce",
+  "latest": "1.0.0",
+  "releasedAt": "2026-08-03T17:03:00Z",
+  "minSupported": "1.0.0",
+  "mandatory": false,
+  "notes": {
+    "ar": "الإصدار الأول المُدار عبر النشر الآلي.",
+    "en": "First release published through the automated pipeline."
+  },
+  "notesUrl": null
+}
