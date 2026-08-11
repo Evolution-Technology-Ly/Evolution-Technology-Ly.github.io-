@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "product": "evocommerce",
-  "latest": "1.1.1",
+  "latest": "1.1.2",
   "releasedAt": "2026-08-10T19:12:00Z",
   "minSupported": "1.0.0",
   "mandatory": false,
   "notes": {
-    "ar": "تحسينات وإصلاحات: معالجة مشكلة في رفع صور المنتجات التي تحتوي أسماء ملفاتها على رموز خاصة، وتحسين شاشة الدخول على الهواتف، وبدء لوحات التصفية مطوية لإتاحة مساحة أكبر.",
-    "en": "Improvements and fixes: product images whose file names contain special characters now upload and display reliably, the sign-in screen looks better on phones, and filter panels start collapsed to leave more room on screen."
+    "ar": "تحسين شاشة تحديث النظام: تعرض الآن إصدار جزأي البرنامج معًا، وتنبّهك بوضوح إذا اكتمل التحديث جزئيًا فقط بدل ترك المشكلة تظهر لاحقًا بشكل غير مفهوم.",
+    "en": "System update screen improvements: it now shows the version of both parts of the application together, and tells you plainly if an update completed only partway — instead of leaving the problem to surface later in a confusing way."
   },
   "notesUrl": null
 }
