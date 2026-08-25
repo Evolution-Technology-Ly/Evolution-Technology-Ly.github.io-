@@ -13,6 +13,7 @@
     about:         'about.html',
     services:      'services.html',
     contact:       'contact.html',
+    projects:      'projects.html',
     architecture:  'services/architecture.html',
     development:   'services/development.html',
     modernization: 'services/modernization.html',
@@ -185,6 +186,7 @@
               '<ul class="navbar-nav ' + navAlign + ' align-items-lg-center gap-lg-1">',
                 navLink('home',    t('nav.home')),
                 navLink('about',   t('nav.about')),
+                navLink('projects', t('nav.projects') || (isAr ? 'مشاريعنا' : 'Our Projects')),
                 '<li class="nav-item dropdown">',
                   '<a class="nav-link dropdown-toggle" href="' + pageUrl('services', lang) + '"',
                     ' data-page="services" role="button" data-bs-toggle="dropdown" aria-expanded="false">',
@@ -247,6 +249,7 @@
               '<ul>',
                 '<li><a href="' + pageUrl('home',     lang) + '">' + escHtml(t('nav.home'))     + '</a></li>',
                 '<li><a href="' + pageUrl('about',    lang) + '">' + escHtml(t('nav.about'))    + '</a></li>',
+                '<li><a href="' + pageUrl('projects', lang) + '">' + escHtml(t('nav.projects') || (isAr ? 'مشاريعنا' : 'Our Projects')) + '</a></li>',
                 '<li><a href="' + pageUrl('services', lang) + '">' + escHtml(t('nav.services')) + '</a></li>',
                 '<li><a href="' + pageUrl('contact',  lang) + '">' + escHtml(t('nav.contact'))  + '</a></li>',
               '</ul>',
@@ -269,6 +272,14 @@
                 '<i class="bi bi-telephone-fill" aria-hidden="true"></i>',
                 '<span dir="ltr">+218 92 870 6173</span>',
               '</a>',
+              '<a href="tel:+218917876699" class="et-footer-contact-link">',
+                '<i class="bi bi-telephone-fill" aria-hidden="true"></i>',
+                '<span dir="ltr">+218 91 787 6699</span>',
+              '</a>',
+              '<a href="tel:+218927876699" class="et-footer-contact-link">',
+                '<i class="bi bi-telephone-fill" aria-hidden="true"></i>',
+                '<span dir="ltr">+218 92 787 6699</span>',
+              '</a>',
               '<p class="et-footer-address">',
                 '<i class="bi bi-geo-alt-fill" aria-hidden="true"></i> ',
                 escHtml(t('pages.contact.channels.address.value')),
@@ -278,6 +289,14 @@
                   ' class="et-footer-social-link" aria-label="WhatsApp">',
                   '<i class="bi bi-whatsapp"></i>',
                 '</a>',
+                '<a href="https://wa.me/218917876699" target="_blank" rel="noopener noreferrer"',
+                  ' class="et-footer-social-link" aria-label="WhatsApp +218 91 787 6699">',
+                  '<i class="bi bi-whatsapp"></i>',
+                '</a>',
+                '<a href="https://wa.me/218927876699" target="_blank" rel="noopener noreferrer"',
+                  ' class="et-footer-social-link" aria-label="WhatsApp +218 92 787 6699">',
+                  '<i class="bi bi-whatsapp"></i>',
+                '</a>',
                 '<a href="https://www.linkedin.com/company/evo-tech-ly" target="_blank" rel="noopener noreferrer"',
                   ' class="et-footer-social-link" aria-label="LinkedIn">',
                   '<i class="bi bi-linkedin"></i>',
@@ -285,6 +304,10 @@
                 '<a href="https://www.facebook.com/evotechly" target="_blank" rel="noopener noreferrer"',
                   ' class="et-footer-social-link" aria-label="Facebook">',
                   '<i class="bi bi-facebook"></i>',
+                '</a>',
+                '<a href="https://www.youtube.com/@EvolutionTechnology-ly" target="_blank" rel="noopener noreferrer"',
+                  ' class="et-footer-social-link" aria-label="YouTube">',
+                  '<i class="bi bi-youtube"></i>',
                 '</a>',
               '</div>',
             '</div>',
@@ -321,7 +344,8 @@
     var title = resolve(translations, pageKey + '.title') || '';
     var meta  = resolve(translations, pageKey + '.meta')  || '';
 
-    document.title = (title ? title + ' \u2014 ' : '') + 'Evolution Technology';
+    var brandName = resolve(translations, 'site.name') || 'Evolution Technology';
+    document.title = (title ? title + ' \u2014 ' : '') + brandName;
     var metaEl = document.getElementById('meta-desc');
     if (metaEl && meta) metaEl.setAttribute('content', meta);
   }
@@ -362,6 +386,36 @@
         '</div>',
       ].join('');
     }).join('');
+  }
+
+  /* Projects are locale data, so adding a future product requires no markup changes. */
+  function renderProjects(translations, lang) {
+    var targets = [document.getElementById('home-projects-grid'), document.getElementById('projects-grid')];
+    var projects = resolve(translations, 'projects');
+    if (!Array.isArray(projects)) return;
+
+    var html = projects.map(function (project) {
+      var tags = (project.tags || []).map(function (tag) {
+        return '<span class="et-project-tag">' + escHtml(tag) + '</span>';
+      }).join('');
+      return [
+        '<article class="et-project-card">',
+          '<div class="et-project-visual">',
+            '<img src="' + getDepth() + escHtml(project.image) + '" alt="' + escHtml(project.imageAlt) + '" loading="lazy">',
+          '</div>',
+          '<div class="et-project-content">',
+            '<div class="et-project-kicker"><span class="et-project-status"></span>' + escHtml(project.category) + '</div>',
+            '<h2 class="et-project-title">' + escHtml(project.name) + '</h2>',
+            '<p class="et-project-slogan">' + escHtml(project.slogan) + '</p>',
+            '<p class="et-project-body">' + escHtml(project.description) + '</p>',
+            '<div class="et-project-tags">' + tags + '</div>',
+            '<a href="' + pageUrl('contact', lang) + '" class="et-project-link">' + escHtml(project.cta) + '<i class="bi bi-arrow-up-right"></i></a>',
+          '</div>',
+        '</article>'
+      ].join('');
+    }).join('');
+
+    targets.forEach(function (target) { if (target) target.innerHTML = html; });
   }
 
   /* ── Render about philosophy blocks ─────────────────────────────────────── */
@@ -508,6 +562,7 @@
 
     renderHomeServices(translations, lang);
     renderHomePrinciples(translations);
+    renderProjects(translations, lang);
     renderAboutPhilosophy(translations);
     renderMethodology(translations);
     renderAboutValues(translations);

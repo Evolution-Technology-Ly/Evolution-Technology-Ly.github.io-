@@ -66,9 +66,10 @@
       var message = (form.querySelector('[name="message"]') || {}).value || '';
       var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if (!name.trim()) return 'Please enter your name.';
-      if (!email.trim() || !emailRe.test(email.trim())) return 'Please enter a valid email address.';
-      if (!message.trim() || message.trim().length < 10) return 'Please enter a message (at least 10 characters).';
+      var isAr = document.documentElement.lang === 'ar';
+      if (!name.trim()) return isAr ? 'يرجى كتابة الاسم.' : 'Please enter your name.';
+      if (!email.trim() || !emailRe.test(email.trim())) return isAr ? 'يرجى كتابة بريد إلكتروني صحيح.' : 'Please enter a valid email address.';
+      if (!message.trim() || message.trim().length < 10) return isAr ? 'يرجى توضيح طلبك في 10 أحرف على الأقل.' : 'Please enter a message (at least 10 characters).';
       return null;
     }
 

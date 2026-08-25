@@ -27,6 +27,7 @@
   </script>
   <script src="locales/en.js"></script>
   <script src="locales/ar.js"></script>
+  <script src="locales/ar-natural.js"></script>
   <title>Contact — Evolution Technology</title>
 </head>
 <body data-page="contact">
@@ -99,27 +100,41 @@
               <h2 class="et-channels__title" data-i18n="pages.contact.channels.heading"></h2>
               <div class="et-channel-list">
 
-                <a href="tel:+218928706173" class="et-channel-card">
-                  <span class="et-channel-icon et-channel-icon--phone">
-                    <i class="bi bi-telephone-fill" aria-hidden="true"></i>
-                  </span>
-                  <span class="et-channel-info">
-                    <span class="et-channel-label" data-i18n="pages.contact.channels.phone.label"></span>
-                    <span class="et-channel-value">+218 92 870 6173</span>
-                  </span>
-                  <i class="bi bi-arrow-up-right et-channel-arrow" aria-hidden="true"></i>
-                </a>
+                <details class="et-channel-group">
+                  <summary class="et-channel-card et-channel-summary">
+                    <span class="et-channel-icon et-channel-icon--phone">
+                      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                    </span>
+                    <span class="et-channel-info">
+                      <span class="et-channel-label" data-i18n="pages.contact.channels.phone.label"></span>
+                      <span class="et-channel-value" data-i18n="pages.contact.channels.phone.count">3 phone numbers</span>
+                    </span>
+                    <i class="bi bi-chevron-down et-channel-chevron" aria-hidden="true"></i>
+                  </summary>
+                  <div class="et-channel-numbers">
+                    <a href="tel:+218928706173"><span dir="ltr">+218 92 870 6173</span><i class="bi bi-telephone"></i></a>
+                    <a href="tel:+218917876699"><span dir="ltr">+218 91 787 6699</span><i class="bi bi-telephone"></i></a>
+                    <a href="tel:+218927876699"><span dir="ltr">+218 92 787 6699</span><i class="bi bi-telephone"></i></a>
+                  </div>
+                </details>
 
-                <a href="https://wa.me/218928706173" target="_blank" rel="noopener noreferrer" class="et-channel-card">
-                  <span class="et-channel-icon et-channel-icon--whatsapp">
-                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
-                  </span>
-                  <span class="et-channel-info">
-                    <span class="et-channel-label" data-i18n="pages.contact.channels.whatsapp.label"></span>
-                    <span class="et-channel-value">+218 92 870 6173</span>
-                  </span>
-                  <i class="bi bi-arrow-up-right et-channel-arrow" aria-hidden="true"></i>
-                </a>
+                <details class="et-channel-group">
+                  <summary class="et-channel-card et-channel-summary">
+                    <span class="et-channel-icon et-channel-icon--whatsapp">
+                      <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                    </span>
+                    <span class="et-channel-info">
+                      <span class="et-channel-label" data-i18n="pages.contact.channels.whatsapp.label"></span>
+                      <span class="et-channel-value" data-i18n="pages.contact.channels.whatsapp.count">3 WhatsApp numbers</span>
+                    </span>
+                    <i class="bi bi-chevron-down et-channel-chevron" aria-hidden="true"></i>
+                  </summary>
+                  <div class="et-channel-numbers et-channel-numbers--whatsapp">
+                    <a href="https://wa.me/218928706173" target="_blank" rel="noopener noreferrer"><span dir="ltr">+218 92 870 6173</span><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/218917876699" target="_blank" rel="noopener noreferrer"><span dir="ltr">+218 91 787 6699</span><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://wa.me/218927876699" target="_blank" rel="noopener noreferrer"><span dir="ltr">+218 92 787 6699</span><i class="bi bi-whatsapp"></i></a>
+                  </div>
+                </details>
 
                 <a href="mailto:info@evotech.ly" class="et-channel-card">
                   <span class="et-channel-icon et-channel-icon--email">
@@ -150,6 +165,17 @@
                   <span class="et-channel-info">
                     <span class="et-channel-label" data-i18n="pages.contact.channels.facebook.label"></span>
                     <span class="et-channel-value">evotechly</span>
+                  </span>
+                  <i class="bi bi-arrow-up-right et-channel-arrow" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@EvolutionTechnology-ly" target="_blank" rel="noopener noreferrer" class="et-channel-card">
+                  <span class="et-channel-icon et-channel-icon--youtube">
+                    <i class="bi bi-youtube" aria-hidden="true"></i>
+                  </span>
+                  <span class="et-channel-info">
+                    <span class="et-channel-label" data-i18n="pages.contact.channels.youtube.label">YouTube channel</span>
+                    <span class="et-channel-value" data-i18n="pages.contact.channels.youtube.value">System guides and tutorials</span>
                   </span>
                   <i class="bi bi-arrow-up-right et-channel-arrow" aria-hidden="true"></i>
                 </a>
