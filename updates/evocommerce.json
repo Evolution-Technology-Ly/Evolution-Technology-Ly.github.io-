@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "product": "evocommerce",
-  "latest": "1.1.2",
-  "releasedAt": "2026-08-10T19:12:00Z",
+  "latest": "1.1.3",
+  "releasedAt": "2026-08-28T13:23:36Z",
   "minSupported": "1.0.0",
   "mandatory": false,
   "notes": {
-    "ar": "تحسين شاشة تحديث النظام: تعرض الآن إصدار جزأي البرنامج معًا، وتنبّهك بوضوح إذا اكتمل التحديث جزئيًا فقط بدل ترك المشكلة تظهر لاحقًا بشكل غير مفهوم.",
-    "en": "System update screen improvements: it now shows the version of both parts of the application together, and tells you plainly if an update completed only partway — instead of leaving the problem to surface later in a confusing way."
+    "ar": "توسّع دعم العملات الأجنبية ليشمل المبيعات والمشتريات ونقطة البيع والمدفوعات والمصروفات والأرصدة الافتتاحية، مع اختيار موثّق لسعر الصرف واحتساب فروق العملة. كما تحسّن توزيع الدفعات على الفواتير، وربط عملة البيع بقائمة الأسعار، وتوزيع مرتجعات الشراء على الدفعات المخزنية، وإقفال الفترات المحاسبية، وسلامة العمليات المتزامنة والمخزون.",
+    "en": "Expanded foreign-currency support across sales, purchasing, POS, payments, expenses, and opening balances, with auditable exchange-rate selection and realized FX differences. This release also improves invoice payment allocation, price-list currency control, purchase-return batch allocation, accounting-period locks, and safeguards for concurrent financial and inventory operations."
   },
   "notesUrl": null
 }
